@@ -1,0 +1,35 @@
+{
+    "锶钙比（Sr/Ca）": {
+        "μmol/mol": {"target": "mmol/mol", "factor": 0.001},
+        "mmol/mol": {"target": "mmol/mol", "factor": 1},
+        "millimol per mol": {"target": "mmol/mol", "factor": 1}
+    },
+    "氧同位素（δ¹⁸O）": {
+        "‰": {"target": "‰", "factor": 1},
+        "per mil": {"target": "‰", "factor": 1}
+    },
+    "海水氧同位素（δ¹⁸O_sw）": {
+        "‰": {"target": "‰", "factor": 1},
+        "per mil": {"target": "‰", "factor": 1}
+    },
+    "水文信号（δ¹⁸Osw-wet, δ18Osw-dry）": {
+        "‰": {"target": "‰", "factor": 1},
+        "‰ VPDB": {"target": "‰", "factor": 1},
+        "per mil": {"target": "‰", "factor": 1}
+    },
+    "碳同位素（δ¹³C）": {
+        "‰": {"target": "‰", "factor": 1},
+        "per mil": {"target": "‰", "factor": 1}
+    },
+    "海表温度（SST）": {
+        "°C": {"target": "°C", "factor": 1},
+        "℃": {"target": "°C", "factor": 1},
+        "°F": {"target": "°C", "factor": 0.5556, "offset": -32},
+        "degree Celsius": {"target": "°C", "factor": 1}
+    },
+    "镁钙比（Mg/Ca）": {
+        "mmol/mol": {"target": "mmol/mol", "factor": 1},
+        "μmol/mol": {"target": "mmol/mol", "factor": 0.001},
+        "millimol per mol": {"target": "mmol/mol", "factor": 1}
+    }
+}

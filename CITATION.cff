@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the version you used."
+type: software
+title: YH-CoralExtract
+authors:
+  - name: YH-CoralExtract contributors
+version: 1.0.0
+repository-code: https://github.com/Wangmingzhuang1/YH-CoralExtract
+license: MIT

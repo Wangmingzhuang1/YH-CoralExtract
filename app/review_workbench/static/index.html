@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>人工复核工作台 · 珊瑚古气候数据</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <div class="project"><strong>珊瑚古气候数据</strong><span id="batch"></span></div>
+      <div class="exports">
+        <a id="export-notes" class="button quiet" href="/api/export?which=annotations" download>导出批注</a>
+        <a id="export-decisions" class="button primary" href="/api/export?which=decisions" download>导出裁决 CSV</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="intro">
+      <div><h1>人工复核工作台</h1><p>按源文件、表块与证据复核，同一源列可批量处理。</p></div>
+      <dl class="metrics" id="metrics" aria-label="批次统计"></dl>
+    </div>
+    <div class="workspace">
+      <section class="queue" aria-labelledby="queue-title">
+        <div class="queue-head">
+          <div class="section-heading"><h2 id="queue-title">复核队列</h2><span id="list-total"></span></div>
+          <form id="filters" role="search">
+            <label class="search"><span class="sr-only">搜索复核队列</span>
+              <input id="search" type="search" placeholder="文件、列名、DOI 或原因">
+            </label>
+            <button class="button quiet" type="submit">搜索</button>
+          </form>
+          <div class="filter-row">
+            <label><span class="sr-only">复核类别</span><select id="category"><option value="">全部类别</option></select></label>
+            <label><span class="sr-only">复核状态</span><select id="status">
+              <option value="paper">论文复核后待人工</option><option value="open">全部待处理</option><option value="all">全部状态</option>
+              <option value="annotated">已批注</option><option value="resolved">已保存裁决</option>
+              <option value="history">已应用与已排除</option>
+            </select></label>
+          </div>
+        </div>
+        <div id="cases" aria-live="polite" class="case-list"><p class="empty">正在载入复核队列…</p></div>
+        <div class="pager">
+          <button class="button quiet" id="previous" type="button">上一页</button>
+          <span id="page"></span>
+          <button class="button quiet" id="next" type="button">下一页</button>
+        </div>
+      </section>
+      <section class="detail" aria-label="复核详情" id="detail" tabindex="-1"><p class="empty">选择复核组查看证据。</p></section>
+    </div>
+    <div id="notification" role="status" class="notification" hidden></div>
+  </main>
+</body>
+</html>

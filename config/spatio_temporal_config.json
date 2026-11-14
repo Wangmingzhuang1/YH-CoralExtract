@@ -1,0 +1,1009 @@
+{
+  "time_resolution_thresholds": {
+    "monthly": {
+      "min_data_points_per_year": 10,
+      "max_data_points_per_year": 13
+    },
+    "bimonthly": {
+      "min_data_points_per_year": 5,
+      "max_data_points_per_year": 7
+    },
+    "quarterly": {
+      "min_data_points_per_year": 3,
+      "max_data_points_per_year": 5
+    },
+    "biannual": {
+      "min_data_points_per_year": 1.5,
+      "max_data_points_per_year": 2.5
+    },
+    "annual": {
+      "min_data_points_per_year": 0.8,
+      "max_data_points_per_year": 1.2
+    },
+    "greater_than_annual": {
+      "min_data_points_per_year": 0,
+      "max_data_points_per_year": 0.8
+    }
+  },
+  "spatial_distance_thresholds": {
+    "site_deduplication": 0.1,
+    "local_reproducibility": 50,
+    "regional_analysis": 3000
+  },
+  "reproducibility_thresholds": {
+    "Sr_Ca_bimonthly": 0.11,
+    "delta18O_bimonthly": 0.24
+  },
+  "coordinate_ranges": {
+    "latitude_min": -90,
+    "latitude_max": 90,
+    "longitude_min": -180,
+    "longitude_max": 180
+  },
+  "noaa_reviewed_representatives": {
+    "10.25921/j078-dh26|08suma01a": {
+      "bounds_south_north_west_east": [
+        -0.4,
+        -0.13,
+        98.52,
+        98.55
+      ],
+      "evidence": "NOAA 原档案 Description 和 Site_Name 明确记录 Mentawai 三岛三支岩芯构成一条 δ18O 复合序列。矩形中点用于全球分布图。"
+    },
+    "10.25921/j078-dh26|08suma01b": {
+      "bounds_south_north_west_east": [
+        -0.4,
+        -0.13,
+        98.52,
+        98.55
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），且站点为多个岛屿（Penang, Tanahbala, and Tanahmasa Islands），并非单一站点的精确坐标。源表 Abram2008a2.txt 的数据列为 age | dmi_filt | dmi，是归一化的珊瑚 DMI"
+    },
+    "10.25921/xbpj-ad63|abram2009 mentawai": {
+      "bounds_south_north_west_east": [
+        -3.5,
+        -0.9,
+        98.6,
+        100.6
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅提供 Mentawai Islands 的空间范围（纬度 -3.5 至 -0.9，经度 98.6 至 100.6），未给出该站点的精确坐标。论文描述 Mentawai Island chain 位于苏门答腊以西约 200 km，但未提供单一代表点的十进制度坐标。源表包含多个珊瑚样本（PG01、TM01、TN99、LB99、SMG01、B01、P01、TF99、TF01、SK01 等），来自 "
+    },
+    "10.25921/xbpj-ad63|abram2009 png": {
+      "bounds_south_north_west_east": [
+        -3.45,
+        -3.34,
+        143.54,
+        144.22
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅提供 Muschu and Koil Islands 的空间范围（纬度 -3.45 至 -3.34，经度 143.54 至 144.22），未给出该站点的精确坐标。论文描述 Muschu 和 Koil 分别位于 Sepik 河口以东 73 km 和 115 km，但未提供单一代表点的十进制度坐标。源表包含来自两个岛屿的多个珊瑚样本（MS01、MS04、KL03 为现代样本；FM09–FM24"
+    },
+    "10.25921/7g8t-ev79|Anagnostou2011elem": {
+      "bounds_south_north_west_east": [
+        -90.0,
+        90.0,
+        -180.0,
+        180.0
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出全球空间范围（Site_Name: Global，纬度 -90.0~90.0、经度 -180.0~180.0），属坐标范围而非站点精确坐标，不能用作代表点。源表 Anagnostou2011elem 为多站点数据集：第119–138行共20个珊瑚标本各自具有不同的 Coral_Lat/Coral_Long（如 80358=48/8、48739=48/7、47407=-55/130、Z97"
+    },
+    "10.25921/g86a-rg88|DRYF1 and PLSF1 SST D14": {
+      "bounds_south_north_west_east": [
+        24.638,
+        24.693,
+        -82.862,
+        -82.773
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），未逐字给出该站点（DRYF1 与 PLSF1 两个浮标）的精确坐标；且为多站点，无法唯一对应一个代表点。论文中出现的 24.5°N,82.5°W 为 1°网格中心而非站点坐标，不能用作站点精确坐标。故返回 needs_human。"
+    },
+    "10.25921/g86a-rg88|Tortugas Sr/Ca D14": {
+      "bounds_south_north_west_east": [
+        24.617,
+        24.7,
+        -82.867,
+        -82.8
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），未逐字给出该站点的精确坐标；站点名为 Pulaski Reef 与 93DRYSS 两处，论文亦分别给出不同位置（Pulaski Reef 24°42′N,82°48′W 与 south of Long Key 24°37′N,82°52′"
+    },
+    "10.25921/g86a-rg88|Tortugas SST D14": {
+      "bounds_south_north_west_east": [
+        24.617,
+        24.7,
+        -82.867,
+        -82.8
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），未逐字给出该站点的精确坐标；站点名为 Pulaski Reef 与 93DRYSS 两处，论文分别给出不同位置（24°42′N,82°48′W 与 24°37′N,82°52′W），多站点无法唯一对应一个代表点。故返回 needs_huma"
+    },
+    "10.25921/979k-br89|Kiritimati X12-D1-4 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（Northernmost_Latitude: 2.05, Southernmost_Latitude: 1.683333, Easternmost_Longitude: -157.15, Westernmost_Longitude: -157.55），论文中提及的坐标 (2°N, 157°W) 为岛屿概略位置而非该珊瑚样本 X12-D1-"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-38 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS21-38 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-40 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS21-40 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-45(1) Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS21-45(1) 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-45(2) Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS21-45(2) 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-51 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS21-51 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS22-8 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS22-8 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS27-2 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），论文中 (2°N, 157°W) 为岛屿概略位置。当前材料中未找到珊瑚样本 X13-FS27-2 的精确采样点坐标，无法确认。"
+    },
+    "10.25921/979k-br89|Kiritimati X12-D1-6 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出 Kiritimati Island 的空间范围（Northernmost_Latitude 2.05 / Southernmost_Latitude 1.683333；Easternmost_Longitude -157.15 / Westernmost_Longitude -157.55），未逐字给出 X12-D1-6 这一珊瑚序列的精确站点坐标。论文中的 “Kiritimati ("
+    },
+    "10.25921/979k-br89|Kiritimati X12-D2-5 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：原件仅提供岛屿级空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），没有 X12-D2-5 单个采样点的精确坐标；同目录论文亦无该样点坐标，无法唯一对应。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-15 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表仅有 Kiritimati Island 的经纬度边界，未给出 X13-FS21-15 的具体采样坐标；论文中的岛屿位置 (2°N, 157°W) 为概略标注，不足以确认该序列站点坐标。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-22 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：当前材料中只有 Kiritimati Island 的空间范围，未见 X13-FS21-22 样点的精确经纬度；论文亦仅给出岛屿级位置，无法唯一确定该序列坐标。"
+    },
+    "10.25921/wbae-7x06|Hendy2002 comp": {
+      "bounds_south_north_west_east": [
+        -18.85,
+        -17.78,
+        146.13,
+        147.1
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表 Hendy2002a1.txt 仅给出空间范围（Northernmost_Latitude: -17.78, Southernmost_Latitude: -18.85, Easternmost_Longitude: 147.1, Westernmost_Longitude: 146.13），而非单一站点的精确坐标。论文明确说明样品来自七个不同礁石（seven reefs, 12 to 12"
+    },
+    "10.25921/2y3z-s846|hendy2003 comp": {
+      "bounds_south_north_west_east": [
+        -18.85,
+        -17.78,
+        146.13,
+        147.1
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表 Hendy2003a1.txt 为多站点合成的发光主序列（age_CE | lumin），档案仅给出中央大堡礁的空间范围（Northernmost_Latitude -17.78、Southernmost_Latitude -18.85、Easternmost_Longitude 147.1、Westernmost_Longitude 146.13），属于范围而非单一站点精确坐标。论文 Ta"
+    },
+    "10.25921/jd8r-nc90|Global Sr/Ca Kilbourne2025": {
+      "bounds_south_north_west_east": [
+        -5.50141666666667,
+        26.2999666666667,
+        -158.242266666667,
+        118.45695
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：该记录为 Global Coral Ocean Sites，档案仅给出全球空间范围（纬度 -5.50 至 26.30，经度 -158.24 至 118.46），源表包含 Dewakang Kecil、Doangdoangan Besar、Kalukalukuang、Green Island、Kusu Island、Keawaula Beach、Kaneohe Bay、Barbados 多侧、Dee"
+    },
+    "10.25921/jd8r-nc90|24Hr Caribbean Sr/Ca Kilbourne2025": {
+      "bounds_south_north_west_east": [
+        18.7386,
+        24.8265,
+        -80.8145,
+        -64.3091
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：该 24 小时采样表包含三个不同地点：Loblolly（18.7386/-64.3091）、Punta Cana（18.8061/-68.5721）、KML（24.8265/-80.8145），跨越东北加勒比海大范围区域，档案仅给出空间范围（纬度 18.74–24.83，经度 -80.81 至 -64.31），无法唯一对应一个代表站点坐标。"
+    },
+    "10.25921/wp5t-hm56|Global_Sr-Ca_Kilbourne2022": {
+      "bounds_south_north_west_east": [
+        -5.38243333333333,
+        26.2999666666667,
+        -158.242266666667,
+        121.4721
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：该记录为 Khare2023a1.txt 的全球机会采样表（Site_Name: Global Coral Ocean Sites），档案只给出跨大洋的空间范围（最北 26.2999666666667、最南 -5.38243333333333、最东 121.4721、最西 -158.242266666667），不是站点坐标。原表逐行给出多个互不相同的站点及各自经纬度（Dewakang Kecil "
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-fs9-6": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表 Hitt2022a8.txt 只给出多站点空间范围（纬度 1.683333–2.05，经度 -157.55 至 -157.15），Site_Name 为 Multiple Sites，属范围而非站点坐标。论文给出的 2°N, 157°W 与 1°52'N, 157°24'W 为岛屿/研究区代表点，Table 1 脚注坐标为插值 SST 产品格点，不能代替 X12-FS9-6 的实际采样坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x13-fs17-8": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表 Hitt2022a9.txt 同样只提供 Kiritimati Island 多站点的经纬度边界（2.05 / 1.683333；-157.15 / -157.55），Site_Name 标注 Multiple Sites。论文中的 2°N, 157°W（摘要）与 1°52'N, 157°24'W（正文）为区域代表点，且彼此不完全一致；Table 1 脚注坐标属 SST 格点。没有任何原文逐"
+    },
+    "10.25921/kcda-nz73|Kiritimati2013 modstack1": {
+      "bounds_south_north_west_east": [
+        1.855333,
+        1.97,
+        -157.56,
+        -157.3
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表仅提供空间范围（Northernmost_Latitude: 1.97, Southernmost_Latitude: 1.855333, Easternmost_Longitude: -157.3, Westernmost_Longitude: -157.56），且站点名包含多个珊瑚个体（CW3, PP7-3, XM0, and XM22）。论文中给出的精确坐标分别对应化石珊瑚XM35（1°"
+    },
+    "10.25921/gcmr-hc61|Microatoll2011 stack": {
+      "bounds_south_north_west_east": [
+        1.855333,
+        1.97,
+        -157.500133,
+        -157.3
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表仅提供空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），且该记录为三个微环礁（CW3、XM0、XM22）的堆叠序列，来自岛上不同位置（Cecile Peninsula 与 Northeast Point）。论文 Table 3 给出的精确坐标属于海水采样点而非珊瑚站点本身；Fig. 2 仅以地图"
+    },
+    "10.25921/f1bh-jj11|Kiritimati2021bottle-salinity": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost_Latitude: 2.05, Southernmost_Latitude: 1.683333, Easternmost_Longitude: -157.15, Westernmost_Longitude: -157.55），站点名称为 'Kiritimati Island, Multiple Sites'，表明数据来自多个采样点。论文中提及的坐标 '"
+    },
+    "10.25921/f1bh-jj11|Kiritimati2021bottle-d18O": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost_Latitude: 2.05, Southernmost_Latitude: 1.683333, Easternmost_Longitude: -157.15, Westernmost_Longitude: -157.55），站点名称为 'Kiritimati Island, Multiple Sites'，表明数据来自多个采样点。论文中提及的坐标 '"
+    },
+    "10.25921/9xbw-sk21|SG1 and SPEY1 Monthly Sr/Ca Ong2022": {
+      "bounds_south_north_west_east": [
+        11.301,
+        11.354,
+        -60.529,
+        -60.508
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：Ong2022a6.txt 为 SG1 与 SPEY1 两站点合并的种间 SST 重建记录（Interspecies_SST）。档案元数据给出空间范围：Northernmost_Latitude 11.354、Southernmost_Latitude 11.301、Easternmost_Longitude −60.508、Westernmost_Longitude −60.529，对应两个不同"
+    },
+    "10.25921/0qp7-vy63|Fanning+Palmyra RegEMindices Sanchez2020": {
+      "bounds_south_north_west_east": [
+        3.856,
+        5.89,
+        -162.12,
+        -159.367
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表 Sanchez2020a2.txt 的档案头只给出 Fanning 与 Palmyra 两岛的空间范围（Northernmost_Latitude 5.89、Southernmost_Latitude 3.856、Easternmost_Longitude -159.367、Westernmost_Longitude -162.12），并非该记录的单一站点精确坐标；论文摘要中的 “Fanni"
+    },
+    "10.25921/0qp7-vy63|Palmyra composite d18O Sanchez2020": {
+      "bounds_south_north_west_east": [
+        5.87,
+        5.89,
+        -162.12,
+        -162.12
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源表 Sanchez2020a4.txt 档案头虽纬度区间很窄（5.89–5.87）、经度东西界同为 -162.12，但这些字段仍是范围/边界定义而非逐字给出的站点精确坐标；站点名为 “Palmyra Island RT10 and West Reef Flat”，包含 RT10 与 West Reef Flat 两处采样点（对应 d18O_FPrecon 与 d18O_Cobb 两列），无法唯一"
+    },
+    "10.25921/w5rj-fy33|0C032 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点0C032的精确坐标。Northernmost/Southernmost/Easternmost/Westernmost为边界值而非单点坐标，不能用于confirm_coordinates。同目录论文及附件中亦未找到该站点的精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|0C033 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点0C033的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|0C034 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点0C034的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|0C04A Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点0C04A的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|QG041 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点QG041的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|QG0410 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点QG0410的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|QG042 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点QG042的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "10.25921/w5rj-fy33|QG043 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（纬度19.3–19.33，经度110.67–110.68），未逐字提供站点QG043的精确坐标。边界值不能代替站点坐标，同目录材料中未找到该站点精确经纬度。"
+    },
+    "https://doi.org/10.5281/zenodo.5706493|SCS_TCtype_tao2021": {
+      "bounds_south_north_west_east": [
+        15.1045,
+        17.0837,
+        111.5876,
+        117.8015
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），不是单一站点精确坐标。同目录 Tao2021a8.txt 的 Description 列出五个不同采样点（BJ、CH、HYD、LYJ、GQ）各有独立坐标，无法唯一对应到本记录 SCS_TCtype_tao2021。该表为南海热带气旋分类计数"
+    },
+    "10.25921/tye8-we33|EP09-28 Holocene Toth15": {
+      "bounds_south_north_west_east": [
+        8.631953,
+        8.634317,
+        -79.029478,
+        -79.028758
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出站点 Playa Larga Reef, Contadora Island 的经纬度范围（Northernmost_Latitude 8.634317 / Southernmost_Latitude 8.631953；Easternmost_Longitude -79.028758 / Westernmost_Longitude -79.029478），属于空间范围而非该站点的精确坐标。"
+    },
+    "https://doi.org/10.5281/zenodo.5706493|SST_tao2021": {
+      "bounds_south_north_west_east": [
+        15.1045,
+        17.0837,
+        111.5876,
+        117.8015
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围，非单一站点精确坐标。SST_tao2021 记录为西北太平洋区域海表温度及 NINO3.4 SST（Notes: The latitude of TCs, NINO3.4 SST, and SST of the NWP during 1945-2019），论文明确使用网格化区域平均数据（1.5°N–49.5°N, 98.5°E–155.5°E），不对应任何单一采样站点。同目录 "
+    },
+    "https://doi.org/10.5281/zenodo.5706493|stormCategory_tao2021": {
+      "bounds_south_north_west_east": [
+        15.1045,
+        17.0837,
+        111.5876,
+        117.8015
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），不是单一站点精确坐标。stormCategory_tao2021 为整个西北太平洋（含南海）各等级热带气旋年度频次统计（H5/H4/H3/H2/H1/TS/TC/typhoon/super-typhoon），属区域汇总数据而非单站点观测。同"
+    },
+    "10.25921/4vgn-am55|Ifaty and Tulear SST Z14": {
+      "bounds_south_north_west_east": [
+        -23.357167,
+        -23.142967,
+        43.583067,
+        43.619483
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude、Easternmost/Westernmost_Longitude），并非该站点的精确坐标。研究涉及 Ifaty 和 Tulear 两个珊瑚礁站点，论文中仅以近似值 '43°E, 23°S' 描述区域位置，未逐字给出可唯一对应该复合记录的单一精确经纬度。坐标范围不能当作站点坐标，多站点无法唯一对应，需人工确认"
+    },
+    "10.25921/wnnj-hh12|HAI Composite Z14": {
+      "bounds_south_north_west_east": [
+        -28.465,
+        -28.461,
+        113.75,
+        113.77
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅给出空间范围（Northernmost/Southernmost_Latitude: -28.461/-28.465，Easternmost/Westernmost_Longitude: 113.77/113.75），属于坐标范围而非站点精确坐标。论文方法部分给出的 '113°75′E, 28°46′S' 是 East Wallabi 岛群所有取芯点的共同位置描述（最大间距2.8 km），且"
+    },
+    "10.25921/hxg7-6n30|WAustralia SST Zinke15": {
+      "bounds_south_north_west_east": [
+        -28.4609,
+        -17.5196,
+        113.963,
+        119.363
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：该记录为 WAustralia（西澳）区域合成 SST，档案仅给出空间范围：Northernmost_Latitude -17.5196、Southernmost_Latitude -28.4609、Easternmost_Longitude 119.363、Westernmost_Longitude 113.963，跨越约 11° 纬度。论文中对应的 17–28°S, 113–119°E 亦为区"
+    },
+    "None|HYD_NOG_SSTA Brenner2020": {
+      "bounds_south_north_west_east": [
+        -20.0,
+        -17.0,
+        146.0,
+        151.0
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源记录 HYD_NOG_SSTA Brenner2020 同时涵盖 HYD（Hydrographers Passage）和 NOG（Noggin Pass）两个站点。原件第47–48行逐字给出了多个钻孔的精确坐标：HYD 有 325-M0031A (-19.678950, 150.239610)、325-M0033A (-19.678830, 150.239850)、325-M0035A (-19"
+    },
+    "None|Gulf of Chiriqui S1, PPB, PMC Ba/Ca Brenner2025": {
+      "bounds_south_north_west_east": [
+        7.7839,
+        7.983333,
+        -82.05,
+        -81.603517
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：源记录为 'Gulf of Chiriqui S1, PPB, PMC Ba/Ca Brenner2025'，涉及三个珊瑚站点。档案仅给出空间范围（Northernmost/Southernmost Latitude、Easternmost/Westernmost Longitude），不是单一站点的精确坐标。论文第8页逐字给出了三个站点各自的精确坐标：S1 (7°59' N, 82°3' W)、"
+    },
+    "None|X13-17-11 d18O Morris2025": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅提供 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），未给出样品 X13-17-11 的精确站点坐标。四个文件共享同一范围，无法唯一确定该样品的采集点坐标。"
+    },
+    "None|X13-17-12 d18O Morris2025": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅提供 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），未给出样品 X13-17-12 的精确站点坐标。四个文件共享同一范围，无法唯一确定该样品的采集点坐标。"
+    },
+    "None|X15C-28-22 d18O Morris2025": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅提供 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），未给出样品 X15C-28-22 的精确站点坐标。四个文件共享同一范围，无法唯一确定该样品的采集点坐标。"
+    },
+    "None|X15C-35-9 d18O Morris2025": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "档案仅给出空间范围；论文级复核（qwen4-max-preview，run_20261112_182909_626325 全scope，2026-11-12）确认同目录论文与附件无逐站点精确坐标。区域矩形中点为最佳代表点，按区域复合序列标注。模型理由：档案仅提供 Kiritimati Island 的空间范围（纬度 1.683333–2.05，经度 -157.55–-157.15），未给出样品 X15C-35-9 的精确站点坐标。四个文件共享同一范围，无法唯一确定该样品的采集点坐标。"
+    },
+    "10.25921/skaz-fm35|IOD events Abram2020": {
+      "bounds_south_north_west_east": [
+        -3.18,
+        -2.37,
+        99.74,
+        100.52
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Southern Mentawai Islands Coral Sites 的经纬度范围（纬度 -2.37 至 -3.18，经度 99.74 至 100.52），为多站点空间包络框而非单一站点的精确坐标。当前材料中未逐字给出该记录对应的唯一 lat/lon 数值对，无法唯一对应代表点，故不能 confirm_coordinates。"
+    },
+    "10.25921/skaz-fm35|IOD 5yr Abram2020": {
+      "bounds_south_north_west_east": [
+        -3.18,
+        -2.37,
+        99.74,
+        100.52
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Southern Mentawai Islands Coral Sites 的经纬度范围（纬度 -2.37 至 -3.18，经度 99.74 至 100.52），为多站点空间包络框而非单一站点的精确坐标。当前材料中未逐字给出该记录对应的唯一 lat/lon 数值对，无法唯一对应代表点，故不能 confirm_coordinates。"
+    },
+    "None|CG2_Flannery2017": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.7,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表档案仅给出 Dry Tortugas National Park 的边界范围（Northernmost_Latitude 24.7 / Southernmost_Latitude 24.6，Easternmost_Longitude -82.9 / Westernmost_Longitude -"
+    },
+    "None|FloridaKeysSST_Flannery2017": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.7,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。该记录为多群体叠加的复合 SST 重建（FloridaKeysSST_Flannery2017，DateComposite/Composite），对应整个 Dry Tortugas 区域而非单一采样点。档案只有边界范围（纬度 24.6–24.7，经度 -82.9 至 -82.7），论文给出的 82°"
+    },
+    "None|08PS-B3_Flannery2017": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.7,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表档案仅提供 Dry Tortugas National Park 的边界范围（纬度 24.6–24.7，经度 -82.9 至 -82.7），非 08PS-B3 站点精确坐标。论文说明 O. faveolata B3 于 2008 年 8 月采自 Pulaski Shoal，但未逐字给出该群体的经"
+    },
+    "None|08PS-B3_Flannery2018": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.71,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表仅提供研究区域的边界框坐标（Northernmost_Latitude: 24.71, Southernmost_Latitude: 24.6, Easternmost_Longitude: -82.9, Westernmost_Longitude: -82.7），而非站点 08PS-B3 的精"
+    },
+    "None|08PS-B4_Flannery2018": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.71,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表仅提供研究区域边界框坐标，非站点 08PS-B4 的精确坐标。论文描述 B4 与 B3 位于 Pulaski Shoal 且相距不到 1 km，但未给出 B4 的独立精确经纬度。AVHRR 网格中心 (24.635°N, 82.875°W) 为区域 SST 数据参考点，不能代替站点坐标。"
+    },
+    "None|08PS-C2_Flannery2018": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.71,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表仅提供研究区域边界框坐标，非站点 08PS-C2 的精确坐标。论文描述 C2 采自 Pulaski Shoal 东北侧，与 B3、B4 同一区域，但未给出 C2 的独立精确经纬度数值。现有材料无法唯一确定该站点坐标。"
+    },
+    "None|NK1_Flannery2018": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.71,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表仅提供研究区域边界框坐标，非站点 NK1 的精确坐标。论文描述 NK1 于 2012 年 5 月采自 North Key 附近东侧，但未给出精确经纬度数值。五个站点最大间距 5 km，边界框无法区分各站点位置。"
+    },
+    "None|NK2_Flannery2018": {
+      "bounds_south_north_west_east": [
+        24.6,
+        24.71,
+        -82.7,
+        -82.9
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。源表仅提供研究区域边界框坐标，非站点 NK2 的精确坐标。论文描述 NK2 与 NK1 同采自 North Key 附近，但未给出精确经纬度数值。现有材料无法唯一确定该站点坐标。"
+    },
+    "10.25921/979k-br89|Kiritimati X12-D2-1 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案只列出 Kiritimati Island 的经纬度边界范围，未逐字给出 X12-D2-1 样点的精确坐标；论文的 2°N, 157°W 是岛屿示意位置，不能作为该序列站点坐标，范围也不能当作站点坐标。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-14 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：X13-FS21-14 的精确站点坐标未在源表或同目录论文中逐字出现；档案给出的只是 Kiritimati Island 的最北/最南纬度与最东/最西经度范围，属范围而非站点坐标。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-16 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：X13-FS21-16 无逐字给出的精确坐标；档案字段为 Northernmost/Southernmost_Latitude 与 Easternmost/Westernmost_Longitude 的范围值，按规则不得作为站点坐标使用。"
+    },
+    "10.25921/979k-br89|Kiritimati X13-FS21-36 Grothe2019": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：X13-FS21-36 的站点坐标在源表与同目录论文中均未逐字给出；档案提供的四个边界值构成范围而非单点坐标，故不能确认精确坐标。"
+    },
+    "None|Monterey T1104-A07 d13C Guilderson2024": {
+      "bounds_south_north_west_east": [
+        36.7,
+        37.4,
+        -123.3,
+        -122.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：候选列中 d13C_Ala/Gly/Thr/Ser/Val/Leu 等为单一氨基酸的化合物特异性 δ13C（变量说明末字段分别为 alanine AA 13C、glycine AA 13C 等），并非整体骨骼 δ13C；只有 Bulk_d13C 为整体（bulk）珊瑚骨骼 δ13C，故 δ13C_value 应取 Bulk_d13C。但原件变量说明存在内部矛"
+    },
+    "None|Monterey T1104-A07 d15N Guilderson2024": {
+      "bounds_south_north_west_east": [
+        36.7,
+        37.4,
+        -123.3,
+        -122.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Central California Coast 的经纬度范围（37.4/36.7/-122/-123.3），未逐字给出 Monterey T1104-A07 站点的精确坐标；范围不能当作站点坐标，多站点无法唯一对应。"
+    },
+    "None|Pioneer T1100-A04 d13C Guilderson2024": {
+      "bounds_south_north_west_east": [
+        36.7,
+        37.4,
+        -123.3,
+        -122.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Central California Coast 的经纬度范围（37.4/36.7/-122/-123.3），未逐字给出 Pioneer T1100-A04 站点的精确坐标；范围不能当作站点坐标，多站点无法唯一对应。"
+    },
+    "None|Pioneer T1100-A04 d15N Guilderson2024": {
+      "bounds_south_north_west_east": [
+        36.7,
+        37.4,
+        -123.3,
+        -122.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Central California Coast 的经纬度范围（37.4/36.7/-122/-123.3），未逐字给出 Pioneer T1100-A04 站点的精确坐标；范围不能当作站点坐标，多站点无法唯一对应。"
+    },
+    "10.25921/jd8r-nc90|FL Grid Sr/Ca Kilbourne2025": {
+      "bounds_south_north_west_east": [
+        24.59678333,
+        24.83205,
+        -81.1219,
+        -80.7653833333333
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：该记录为 Middle Florida Keys 网格采样，档案仅给出区域范围（纬度 24.60–24.83，经度 -81.12 至 -80.77）。源表含 1A–11E 等数十个网格站点（如 1A 24.83216667/-80.7748、1C 24.78235/-80.7698、11E 24.59676667/-80.1218），各站坐标不同且跨多次采样"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiComposite": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点的经纬度范围（Northernmost_Latitude: 2.05, Southernmost_Latitude: 1.683333, Easternmost_Longitude: -157.15, Westernmost_Longitude: -157.55），Site_Name 明确标注 'Mult"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x14-fs28-10": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X14-FS28-10 这一具体珊瑚样品的精确采集坐标。Table S1/S2（Supporting Information）可能包含各样品坐标但未在当前材料中提供。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x15c-fs35-4": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X15c-FS35-4 这一具体珊瑚样品的精确采集坐标。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/wp5t-hm56|Florida_Sr-Ca_Kilbourne2022": {
+      "bounds_south_north_west_east": [
+        24.59678333,
+        24.83205,
+        -81.1219,
+        -80.7653833333333
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：该记录为 Khare2023a2.txt 的 Middle Florida Keys 空间网格表，档案给出的仅是网格外接范围（最北 24.83205、最南 24.59678333、最东 -80.7653833333333、最西 -81.1219），属坐标范围而非站点坐标。原表逐行列出 54 个网格站点（1A–11E）及若干附加点（1D \"stag party"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-d6-1": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X12-D6-1 这一具体珊瑚样品的精确采集坐标。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-fs13-11": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X12-FS13-11 这一具体珊瑚样品的精确采集坐标。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-fs15-7": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X12-FS15-7 这一具体珊瑚样品的精确采集坐标。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-fs20-18": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X12-FS20-18 这一具体珊瑚样品的精确采集坐标。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-fs9-10": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点经纬度范围，Site_Name 为 'Multiple Sites'。论文未提供 X12-FS9-10 这一具体珊瑚样品的精确采集坐标。无法唯一确定该站点的精确坐标。"
+    },
+    "10.25921/6eqq-d806|Hitt2022KiritimatiFossil-x12-fs9-5": {
+      "bounds_south_north_west_east": [
+        1.683333,
+        2.05,
+        -157.55,
+        -157.15
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Kiritimati Island 多站点的经纬度范围（Northernmost_Latitude 2.05 / Southernmost_Latitude 1.683333；Easternmost_Longitude -157.15 / Westernmost_Longitude -157.55），Site_Name 明确为 Multiple "
+    },
+    "10.25921/w5rj-fy33|0C031 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围（Northernmost_Latitude 19.33 / Southernmost_Latitude 19.3）与经度范围（Easternmost_Longitude 110.68 / Westernmost_Longitude 110.67），未逐字给出该站点（0C031，对应论文图 S1 中 OC031）的单一精确坐标；同目录论文各"
+    },
+    "10.25921/w5rj-fy33|QG044 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG044 站点的单一精确坐标；同目录论文（含图 S1 列出 QG044）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w5rj-fy33|QG045 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG045 站点的单一精确坐标；同目录论文（图 S1 面板列出 QG045）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w5rj-fy33|QG046 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG046 站点的单一精确坐标；同目录论文（图 S1 面板列出 QG046）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w5rj-fy33|QG047 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG047 站点的单一精确坐标；同目录论文（图 S1 面板列出 QG047）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w5rj-fy33|QG048 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG048 站点的单一精确坐标；同目录论文（图 S1 面板列出 QG048）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w5rj-fy33|QG049 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG049 站点的单一精确坐标；同目录论文（图 S1 面板列出 QG049）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w5rj-fy33|QG5 Su2016": {
+      "bounds_south_north_west_east": [
+        19.3,
+        19.33,
+        110.67,
+        110.68
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出纬度范围 19.3–19.33 与经度范围 110.67–110.68，未逐字给出 QG5 站点的单一精确坐标；同目录论文（图 S1 面板列出 QG5）亦无该岩芯精确经纬度。范围不能当作站点坐标，无法唯一对应，需人工核对。"
+    },
+    "10.25921/w618-pz09|Global Coral d18O Thompson2022": {
+      "bounds_south_north_west_east": [
+        -28.46,
+        32.47,
+        -174.64,
+        179.23
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：该复核项对应的是整份汇编（source_record: Global Coral d18O Thompson2022），档案第79行明确其为 'Global Coral Dataset Coverage'，第81–84行给出的 Northernmost_Latitude 32.47 / Southernmost_Latitude -28.46 / Easte"
+    },
+    "10.25921/tkrf-f151|Tierney2015EPacific": {
+      "bounds_south_north_west_east": [
+        -10.0,
+        10.0,
+        175.0,
+        -85.0
+      ],
+      "evidence": "档案边界顺序异常已人工核验（E/W标签互换或跨180°），取小跨度解释的区域代表中点。档案仅给出东太平洋重建目标区的四至边界（Northernmost_Latitude 10.0、Southernmost_Latitude -10.0、Easternmost_Longitude -85.0、Westernmost_Longitude 175.0），论文亦以区域框描述该目标，未逐字给出"
+    },
+    "10.25921/tye8-we33|EP09-28 d18Osw Toth15": {
+      "bounds_south_north_west_east": [
+        8.631953,
+        8.634317,
+        -79.029478,
+        -79.028758
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：该表（d18Osw Toth15）档案同样只列出纬度/经度的最北、最南、最东、最西端点，构成范围而非单一站点精确坐标；论文正文仅以度分秒描述 Contadora Island 取芯位置（含 60″ 的异常写法），未逐字给出可与档案唯一对应的十进制度坐标。范围不能当作站点坐标，故返回 needs_human，待人工确定代表点。"
+    },
+    "10.25921/tye8-we33|EP09-28 Geochem Toth15": {
+      "bounds_south_north_west_east": [
+        8.631953,
+        8.634317,
+        -79.029478,
+        -79.028758
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：该表（Geochem Toth15，含 CL-1、CL-2、CL-4 多个现代珊瑚个体）档案仅提供同一组经纬度范围端点，未逐字给出各珊瑚个体的精确采样坐标；论文的度分秒取芯坐标针对 EP09-28 岩芯，无法唯一对应到本表各珊瑚个体。多来源且仅有范围，按规则返回 needs_human。"
+    },
+    "10.25921/tkrf-f151|Tierney2015Indian": {
+      "bounds_south_north_west_east": [
+        -15.0,
+        20.0,
+        40.0,
+        100.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案只列出印度洋目标区的空间范围（20.0/-15.0 纬度、100.0/40.0 经度），论文同样以盆地尺度框（20°N–15°S, 40–100°E）定义该重建目标，且明言部分珊瑚站点位于目标框之外。原件未逐字给出可唯一对应该记录的站点精确坐标，范围不能充当站点坐标，需人工核定代表点。"
+    },
+    "10.25921/tkrf-f151|Tierney2015WAtlantic": {
+      "bounds_south_north_west_east": [
+        15.0,
+        30.0,
+        -90.0,
+        -60.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案给出的西大西洋数值为区域四至（30.0/15.0 纬度、-60.0/-90.0 经度），论文将其定义为限于加勒比海的目标框（30°N–15°N, 90°W–60°W），并非某一采样站点坐标。原件无逐字的单点经纬度，且该重建由多个站点合成，来源无法唯一对应到一个坐标点，需人工核定。"
+    },
+    "10.25921/tkrf-f151|Tierney2015WPacific": {
+      "bounds_south_north_west_east": [
+        -25.0,
+        25.0,
+        110.0,
+        155.0
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案中西太平洋的四个数值为目标区边界（25.0/-25.0 纬度、155.0/110.0 经度），论文以 25°N–25°S, 110°E–155°E 的区域框描述，并指出南太平洋等站点在框外。原件未逐字提供该记录对应的单一站点精确坐标，范围不可作为站点坐标使用，需人工核定代表点。"
+    },
+    "10.25921/mbrd-8382|13AN17 Sr/Ca Xu15": {
+      "bounds_south_north_west_east": [
+        18.7,
+        18.8,
+        -64.4,
+        -64.3
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Soldier's Point, Anegada 的经纬度范围（纬度 18.7–18.8，经度 -64.4 至 -64.3），未逐字给出该站点（13AN17）的精确坐标。论文亦只描述采样地点为 Soldier Point 海滩砾石堤，未提供具体经纬度数值。按规则坐标范围不能当作站点坐标，无法唯一确定代表点，需人工核对。"
+    },
+    "10.25921/mbrd-8382|13AN18 Sr/Ca Xu15": {
+      "bounds_south_north_west_east": [
+        18.7,
+        18.8,
+        -64.4,
+        -64.3
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Soldier's Point, Anegada 的经纬度范围（纬度 18.7–18.8，经度 -64.4 至 -64.3），未逐字给出该站点（13AN18）的精确坐标。论文仅说明三个珊瑚巨砾采自 Soldier Point 海滩砾石堤并编号 13AN17、13AN18、13AN19，未给出各标本或站点的精确经纬度。坐标范围不能当作站点坐标，需人"
+    },
+    "10.25921/mbrd-8382|13AN19 Sr/Ca Xu15": {
+      "bounds_south_north_west_east": [
+        18.7,
+        18.8,
+        -64.4,
+        -64.3
+      ],
+      "evidence": "论文级复核确认档案仅给区域范围、原文无逐字单站点精确坐标，区域中点为最佳代表点。模型理由：档案仅给出 Soldier's Point, Anegada 的经纬度范围（纬度 18.7–18.8，经度 -64.4 至 -64.3），未逐字给出该站点（13AN19）的精确坐标。论文与图注仅描述采样地位于 Anegada 北侧 Soldier Point 的海滩砾石堤，未提供精确经纬度数值；且三个标本共用同一地点范围，无法唯一对应到单一坐标点。按规则返回"
+    },
+    "None|Li2013Nino3.4": {
+      "bounds_south_north_west_east": [
+        -5.0,
+        5.0,
+        -170.0,
+        -120.0
+      ],
+      "evidence": "NOAA格式区域气候重建（Niño3.4指数，700年ENSO重建），档案四至为区域目标框（5°N–5°S,170°W–120°W），非单站点观测，区域中点为代表点。"
+    }
+  },
+  "temporal_consistency": {
+    "max_year_difference": 1
+  },
+  "ocean_basins": {
+    "Pacific Ocean": "太平洋",
+    "Atlantic Ocean": "大西洋",
+    "Indian Ocean": "印度洋",
+    "Arctic Ocean": "北冰洋",
+    "Southern Ocean": "南大洋",
+    "Mediterranean Sea": "地中海",
+    "Caribbean Sea": "加勒比海",
+    "South China Sea": "南海",
+    "Red Sea": "红海",
+    "Coral Sea": "珊瑚海"
+  },
+  "holocene_stages": {
+    "early": {
+      "min_year": -10050,
+      "max_year": -6050
+    },
+    "middle": {
+      "min_year": -6050,
+      "max_year": -2050
+    },
+    "late": {
+      "min_year": -2050,
+      "max_year": 0
+    },
+    "ce": {
+      "min_year": 0,
+      "max_year": 2025
+    }
+  },
+  "key_events": {
+    "8.2ka": -6250,
+    "4.2ka": -2250
+  }
+}
