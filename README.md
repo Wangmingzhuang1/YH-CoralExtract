@@ -24,6 +24,19 @@ python -m unittest discover -s tests
 
 The example runs the rules-only paper review. Leave the API keys empty for local processing or copy `.env.example` to `.env`, configure compatible model endpoints, and omit `--review-rules-only` for model-backed review. The default judge backend is disabled. Some regression tests use local research fixtures and are skipped when the fixtures are absent.
 
+## Reproduce a published example
+
+```sh
+python -m pip install -r requirements.txt
+python examples/reproduce_grove2013.py --output output/grove2013_example
+```
+
+Use a new output directory. The example downloads one [NOAA source attachment](https://www.ncei.noaa.gov/pub/data/paleo/coral/indian_ocean/grove2013/grove2013-srca-noaa.txt) and the pinned CoralHydro2k reference, about 1.5 MB in total. It uses no API key. It runs the extraction, local coverage audit, sequence comparison and release export using the project code. The source paper is [Grove et al. (2013)](https://doi.org/10.1002/ggge.20095), and the archive citation is [Grove and Zinke (2018), NOAA/WDS](https://doi.org/10.25921/bpem-9j52). Cite the original data and your access date when reusing the attachment.
+
+The expected output is 1,551 Sr/Ca rows, with 517 each for STM2, STM4 and the author composite. The two cores each match all 517 age–value pairs in CoralHydro2k (GR13MAD01 and GR13MAD02). The composite remains separately identified. Check the source manifest and consolidated CSV in the example batch, `comparison/sequence_crosswalk.csv` for the matches, and `release/` for the packaged records. The benchmark denominator in this example still refers to the complete CoralHydro2k reference. This example verifies the archive-defined extraction path. The test suite uses controlled model responses to exercise evidence review, failures and incremental replay.
+
+## Additional commands
+
 ```sh
 python main.py --mode audit --run-dir PATH_TO_RUN --no-flash
 python main.py --mode review --run-dir PATH_TO_RUN --review-file STUDY_OR_FILE --review-apply
