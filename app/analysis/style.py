@@ -97,6 +97,13 @@ PALETTE = {
 }
 
 GROUP_ORDER = ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5', 'Group 6', 'Group 7']
+# 图例显示名：Group 编号对应互斥指标组合（与图 3b 的 G1–G7 定义一致）
+GROUP_DISPLAY = {
+    'Group 1': 'Sr/Ca + δ¹⁸O + δ¹³C', 'Group 2': 'Sr/Ca + δ¹⁸O', 'Group 3': 'δ¹⁸O + δ¹³C',
+    'Group 4': 'Sr/Ca', 'Group 5': 'δ¹⁸O', 'Group 6': 'δ¹³C', 'Group 7': 'Sr/Ca + δ¹³C',
+    'Ba/Ca only': 'Ba/Ca only', 'SST only': 'SST only', 'Ba/Ca + SST': 'Ba/Ca + SST',
+    'Ba/Ca': 'Ba/Ca only', 'SST': 'SST only', 'Other': 'Other',
+}
 # 映射颜色到 Group
 GROUP_COLORS = {g: c for g, c in zip(GROUP_ORDER, PALETTE['primary'])}
 if len(GROUP_ORDER) > len(PALETTE['primary']):

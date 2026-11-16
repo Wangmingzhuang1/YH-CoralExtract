@@ -291,17 +291,17 @@ def environmental_consistency(correlations, examples, enso, enso_pairs, seasonal
             cycle.text(.5, .5, f"No eligible {LABELS[proxy]} series", transform=cycle.transAxes, ha="center")
             continue
         var_name = "SrCa" if proxy == "Sr/Ca" else "d18O"
-        validation.draw_seasonal_cycle(cycle, example["pairs"], var_name, color, example["site"])
+        stats = validation.draw_seasonal_cycle(cycle, example["pairs"], var_name, color, example["site"])
         cycle.set_title(f"({letter}) Monthly seasonal cycle: {example['site']}", loc="left")
         dates = example["pairs"].index
         cycle.set_xlabel(f"Month ({dates[0].year}–{dates[-1].year} overlap)", fontsize=8)
+        if stats:
+            # 三行短标注置于轴内空角：(c) 左上、(d) 右上，避开曲线峰谷与图例
+            if proxy == "Sr/Ca":
+                cycle.text(0.02, 0.98, stats, transform=cycle.transAxes, va="top", fontsize=6.5)
+            else:
+                cycle.text(0.98, 0.98, stats, transform=cycle.transAxes, va="top", ha="right", fontsize=6.5)
         cycle.tick_params(labelsize=7)
-        annotation = cycle.texts[-1]
-        if proxy == "Sr/Ca":
-            annotation.set(position=(.60, .075), ha="center", va="bottom", fontsize=6.8)
-        else:
-            annotation.set(position=(.98, .06), ha="right", va="bottom", fontsize=6.8)
-        annotation.set_bbox({"facecolor": "white", "edgecolor": "none", "alpha": .85, "pad": 1.2})
         legend = cycle.get_legend()
         if proxy == "Sr/Ca":
             legend.set_loc("center")

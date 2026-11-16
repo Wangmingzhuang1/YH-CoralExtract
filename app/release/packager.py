@@ -63,7 +63,7 @@ def _ensure_record_ids(frame: pd.DataFrame) -> None:
 
 
 def build_observations(frame: pd.DataFrame, codes: dict, reprint_of: dict) -> pd.DataFrame:
-    """90 列源表 -> 21 列精简主表（ASCII 表头，单位进数据字典）。"""
+    """90 列源表 -> 精简主表（ASCII 表头，含原始年代列，单位进数据字典）。"""
     out = pd.DataFrame(index=frame.index)
     for target, source in OBSERVATION_COLUMNS.items():
         out[target] = frame[source] if source in frame else np.nan
@@ -76,6 +76,9 @@ def build_observations(frame: pd.DataFrame, codes: dict, reprint_of: dict) -> pd
         spec = PROXIES[name]
         out[name] = pd.to_numeric(frame[spec[0]], errors="coerce") if spec[0] in frame else np.nan
         out[f"{name}_qc_status"] = frame[spec[1]] if spec[1] in frame else "missing_or_invalid_value"
+    if "paleoData_dating_method" in frame:
+        dm = frame["paleoData_dating_method"]
+        out["dating_method_reported"] = dm.notna() & dm.astype(str).str.strip().ne("")
     return out
 
 
@@ -102,6 +105,9 @@ def build_record_metadata(frame: pd.DataFrame, codes: dict, reprint_of: dict) ->
         }
         for target, source in RECORD_METADATA_COLUMNS.items():
             row[target] = _first_non_null(sub[source]) if source in sub else None
+        dating = sub.get("paleoData_dating_method")
+        row["dating_method_reported"] = bool(
+            dating is not None and (dating.notna() & dating.astype(str).str.strip().ne("")).any())
         rows.append(row)
     return pd.DataFrame(rows)
 
@@ -177,7 +183,8 @@ def build_qc_report(observations: pd.DataFrame, records: pd.DataFrame,
     return report
 
 
-def build_release(run_dir, out_dir, version: str = "1.0.0", include_grid: bool = True):
+def build_release(run_dir, out_dir, version: str = "1.0.0", include_grid: bool = True,
+                  baca_inventory=None, assign_unlabelled: bool = True):
     run_dir, out_dir = Path(run_dir), Path(out_dir)
     combined_path = run_dir / "consolidated" / "all_data_combined.csv"
     if not combined_path.exists():
@@ -186,7 +193,8 @@ def build_release(run_dir, out_dir, version: str = "1.0.0", include_grid: bool =
     frame = pd.read_csv(combined_path, low_memory=False)
     if frame.empty:
         raise ValueError("提取批次没有可发布的观测")
-    _ensure_record_ids(frame)
+    if assign_unlabelled:
+        _ensure_record_ids(frame)
 
     reprint_of, reprint_pairs = detect_reprints(frame)
     codes = assign_record_codes(frame)
@@ -244,6 +252,9 @@ def build_release(run_dir, out_dir, version: str = "1.0.0", include_grid: bool =
     if not held.empty:
         held.to_csv(out_dir / "04_provenance_qc" / "held_values.csv", index=False, encoding="utf-8")
     reprint_pairs.to_csv(out_dir / "04_provenance_qc" / "reprint_pairs.csv", index=False, encoding="utf-8")
+    if baca_inventory and Path(baca_inventory).exists():
+        shutil.copy2(baca_inventory, out_dir / "04_provenance_qc" / "baca_high_value_inventory.csv")
+        logger.info("纳入 Ba/Ca 高值单位核验表: %s", Path(baca_inventory).name)
     (out_dir / "04_provenance_qc" / "qc_report.json").write_text(
         json.dumps(qc_report, ensure_ascii=False, indent=1), encoding="utf-8")
 

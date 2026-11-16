@@ -69,6 +69,13 @@ identified reprints. The archive preserves author-processed series alongside the
 original measurements. For analyses requiring independent observations, use
 `source_core_id`, `source_processing` and `composite_evidence` to choose one
 version per core and to avoid counting a composite together with its members.
+Original (pre-standardization) time is preserved in `source_time_value`,
+`source_time_unit` and `source_time_reference_year`; `year_ce` is the standardized
+Common Era year. For Ba/Ca, a `pass` status does not by itself settle the unit:
+high values (>20 umol/mol) may carry a unit dispute, so join
+`04_provenance_qc/baca_high_value_inventory.csv` on `observation_id` and filter by
+`sample_verdict` (e.g. "unit needs adjudication", "publication and archive unit
+conflict") before quantitative use.
 
 ## Citation
 
@@ -93,6 +100,10 @@ data descriptor paper. Source publications are listed per record in
 | year_ce | observation year in Common Era (fractional for sub-annual) |
 | time_resolution | monthly / submonthly / annual / seasonal / bimonthly / biannual / irregular / discrete_samples / unknown |
 | native_interval_years | native sampling interval in years where reported |
+| source_time_value | original time value as reported in the source (e.g. BP or CE year, before standardization) |
+| source_time_unit | original time unit of source_time_value (e.g. cal yr BP, CE, month-year) |
+| source_time_reference_year | reference year for relative time scales (e.g. BP = 1950); empty for absolute CE |
+| source_time_column | source column name the original time was read from |
 | qc_flag | row-level QC flag (0 = clean; see qc_report.json for the full ledger) |
 | reprint_of | record_code of the canonical record if this record is a reprint; empty otherwise |
 | source_core_id | coral core identifier when declared in the source |
@@ -102,6 +113,9 @@ data descriptor paper. Source publications are listed per record in
     for name in PROXIES:
         obs_columns += f"| {name} | {PROXY_LABELS[name]}, unit: {UNITS[name]}; empty = not released |\n"
         obs_columns += f"| {name}_qc_status | value-level QC status for {name} (vocabulary below) |\n"
+    obs_columns += ("| dating_method_reported | boolean: whether this observation row reports a dating "
+                    "method in the source; false = assess age uncertainty from the original study or "
+                    "age-model ensembles, never assume zero |\n")
 
     vocab = "\n".join(f"| {k} | {v} |" for k, v in QC_STATUS_VOCAB.items())
     dictionary = f"""# Data Dictionary — v{version}
@@ -123,7 +137,10 @@ empty cells in CSV and `NA` inside LiPD measurement tables.
 One row per source record: record_id, record_code, site_name, latitude,
 longitude, year_min_ce, year_max_ce, n_observations, time_resolutions,
 proxies, source_files, is_reprint, reprint_of, pub_doi, pub_authors,
-dataset_doi, dataset_investigators, dating_method, dating_error, testing_method.
+dataset_doi, dataset_investigators, dating_method, dating_error, testing_method,
+dating_method_reported (boolean: whether the source record reports a dating
+method; false means age uncertainty must be assessed from the original study
+or age-model ensembles, not assumed zero).
 
 ## 04_provenance_qc/value_provenance.csv
 
@@ -142,6 +159,11 @@ source_line, source_page, source_core_id, source_processing, composite_evidence.
   with a hold category); nothing is silently dropped.
 - reprint_pairs.csv — evidence for reprint detection: site, record pair, proxy,
   method (duplicate_version / near_identical), n_common_years, r.
+- baca_high_value_inventory.csv — unit adjudication for Ba/Ca values >20 umol/mol
+  (key: observation_id): released value, original unit, paper unit evidence and
+  sample_verdict (Agrees with source label / High after source-label conversion;
+  unit needs adjudication / Publication and archive unit conflict / High value
+  follows reported source unit). Join on observation_id to filter unit risk.
 - qc_report.json — value-level and row-level QC accounting, plus the release
   scope declaration (full inclusion; Common Era core range used by the paper).
 

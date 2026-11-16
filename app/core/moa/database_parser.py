@@ -27,7 +27,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from enum import Enum
 import pandas as pd
-from app.core.moa.context_extractor import composite_evidence
+from app.core.moa.context_extractor import composite_evidence, correct_archive_doi
 from app.core.moa.llm_parser import LLMParsingModule, is_derived_observation_column
 from app.core.moa.unit_converter import UnitConversionModule, canonical_unit, finite_number, measurement_parts, resolve_unit
 from app.core.moa.spatiotemporal_standard import (bp_reference_year, calendar_date_order, sampling_profile,
@@ -606,7 +606,7 @@ class UnifiedDatabaseParser:
                     if re.match(r"^0[.]\d{4,9}/", raw_doi):
                         logger.warning("修复缺首1的DOI: %s -> %s", raw_doi, "1" + raw_doi)
                         raw_doi = "1" + raw_doi
-                    metadata["pub1_doi"] = raw_doi
+                    metadata["pub1_doi"] = correct_archive_doi(raw_doi)
 
             elif 'First_Year:' in line_content:
                 try:

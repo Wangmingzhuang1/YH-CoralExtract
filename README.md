@@ -12,6 +12,8 @@ Place the files for each study in a separate directory under `dataset/`, `noaa/`
 
 Model configuration is optional for the local rules. Model-backed extraction and a fresh review are subject to model availability and may differ from the archived run. Decisions reused for extraction are scoped to the verified source version. The source corpus, model responses, study PDFs, and published observations are distributed separately from this code.
 
+`.env.production` pins the model versions and call settings of the YH-CoralGeo v1.1.0 figure batch (consolidated-table SHA-256 `d2ad45f18b3b8bab60b6bfda181ca6ac2c01394e68b6e15ef27dca0ca1a695a8`): extraction `qwen3.8-max` (thinking disabled), lightweight metadata `qwen3.8-flash`, paper-level review `qwen4-max-preview`, judge `tev1:4b` on a local OpenAI-compatible endpoint (accept 0.60 / revoke 0.30), and low-score escalation `deepseek-v4-pro`. Copy its non-secret entries into `.env` and add your keys to reproduce the batch configuration. Verified archive-DOI errata are pinned in `DOI_ERRATA` (`app/core/moa/context_extractor.py`); original archive files are never rewritten.
+
 ## Run
 
 Use Python 3.12 from the repository root.
@@ -41,10 +43,12 @@ The expected output is 1,551 Sr/Ca rows, with 517 each for STM2, STM4 and the au
 python main.py --mode audit --run-dir PATH_TO_RUN --no-flash
 python main.py --mode review --run-dir PATH_TO_RUN --review-file STUDY_OR_FILE --review-apply
 python main.py --mode patch --run-dir PATH_TO_RUN --review-decisions PATH_TO_DECISIONS
-python -m app.release --run-dir PATH_TO_RUN --out PATH_TO_RELEASE
+python -m app.release --run-dir PATH_TO_RUN --out PATH_TO_RELEASE --no-unlabelled
 ```
 
 Extraction writes a consolidated CSV, source inventory, review queue and QC report. Verified incremental runs also export LiPD and NetCDF where supported. A release package includes observation and record tables, value provenance and per-record LiPD files. Retained raw, interpolated, and author-composite versions are identified so they can be selected appropriately in downstream analysis.
+
+The published YH-CoralGeo v1.1.0 package was built with `--no-unlabelled`: 1,430 source records, with 12,188 observations that lack a declared record identity kept in the observation table with an empty `record_code`. The default export instead assigns file-and-sheet-level `unlabelled-` records to those rows (1,462 records); use `--no-unlabelled` to reproduce the published record count.
 
 ## CoralHydro2k comparison
 

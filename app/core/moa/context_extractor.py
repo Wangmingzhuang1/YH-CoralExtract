@@ -41,6 +41,23 @@ def publication_doi(value):
     return doi
 
 
+# 档案 DOI 勘误表：键为来源原文笔误（小写），值为经 Crossref/DataCite 解析确认的注册 DOI。
+# 新增条目须附解析证据，随代码版本控制；原始档案文件不改写，仅在读取时规范化。
+DOI_ERRATA = {
+    # NOAA Pfeiffer2019 档案前缀笔误：10.1002 应为 10.1029（AGU），Crossref 2026-11-16 解析确认
+    "10.1002/2019pa003770": "10.1029/2019PA003770",
+}
+
+
+def correct_archive_doi(raw_doi):
+    """应用已验证的档案 DOI 勘误；未命中勘误表时原样返回。"""
+    corrected = DOI_ERRATA.get(str(raw_doi).casefold())
+    if corrected:
+        logging.warning("应用档案DOI勘误: %s -> %s", raw_doi, corrected)
+        return corrected
+    return raw_doi
+
+
 def quote_names_column(quote, column):
     """检查正文原句是否直接点名该列，避免套用到同指标的其他样品列。"""
     if not isinstance(quote, str) or not quote:
@@ -416,7 +433,7 @@ class ContextExtractor:
             
             # 文献信息
             if data.get('doi'):
-                extracted['pub1_doi'] = data['doi']
+                extracted['pub1_doi'] = correct_archive_doi(data['doi'])
             if data.get('authors'):
                 extracted['pub1_authors'] = data['authors']
             

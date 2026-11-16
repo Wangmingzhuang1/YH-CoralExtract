@@ -461,11 +461,11 @@ def draw_seasonal_cycle(ax, paired, var_name, color, site):
     ax.set_xticks(months, MONTH_LABELS)
     ax.set_xlabel("Month")
     r_raw = pearsonr(paired["proxy"], paired["env"])[0]
-    ax.text(0.02, 0.98,
-            f"r_cycle = {r:.2f} (12-month means)\n"
-            f"r_monthly = {r_raw:.2f}, n = {len(paired):,} paired months",
-            transform=ax.transAxes, va="top", fontsize=7)
+    stats = (f"r_cycle = {r:.2f} (12-month means)\n"
+             f"r_monthly = {r_raw:.2f}\n"
+             f"n = {len(paired):,} paired months")
     ax.set_title(f"{site} ({paired.index[0]} to {paired.index[-1]})", loc="left")
+    return stats
 
 
 def plot_anomaly_series(ax, monthly_df, var_name, site_name, nino=None, enso_stats=None):

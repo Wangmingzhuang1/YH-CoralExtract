@@ -166,7 +166,7 @@ def plot_figure_8_accounting(acc):
     f = acc
 
     # 标题（与图7同款双行衬线大标题）
-    ax.text(50, 98.0, 'GeoDataExtractor: Data Accounting from Archive Files',
+    ax.text(50, 98.0, 'YH-CoralExtract: Data Accounting from Archive Files',
             ha='center', va='center', fontsize=12.5, fontweight='bold', color=WF_INK)
     ax.text(50, 95.2, 'to Analysis-Ready Observations',
             ha='center', va='center', fontsize=12.5, fontweight='bold', color=WF_INK)

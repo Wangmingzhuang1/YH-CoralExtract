@@ -13,7 +13,7 @@
   <rect x="0" y="0" width="1700" height="2120" fill="#FAFAF8"/>
 
   <!-- title -->
-  <text x="850" y="52" text-anchor="middle" font-size="34" font-weight="bold" fill="#111">GeoDataExtractor: A Modular Workflow Architecture for</text>
+  <text x="850" y="52" text-anchor="middle" font-size="34" font-weight="bold" fill="#111">YH-CoralExtract: A Modular Workflow Architecture for</text>
   <text x="850" y="96" text-anchor="middle" font-size="34" font-weight="bold" fill="#111">Paleoclimate Proxy Data Extraction and Standardization</text>
 
   <!-- rotated layer labels -->
@@ -88,9 +88,9 @@
     <rect x="120" y="1300" width="350" height="120" rx="10" fill="#8494A7" stroke="#5F6E80" stroke-width="2"/>
   </g>
   <g text-anchor="middle" fill="#111">
-    <text x="295" y="568" font-size="19" font-weight="bold">Token Plan LLM Endpoint</text>
-    <text x="295" y="596" font-size="15">qwen4-max-preview / qwen3.8-flash</text>
-    <text x="295" y="620" font-size="15">DeepSeek escalation</text>
+    <text x="295" y="568" font-size="19" font-weight="bold">LLM Endpoint (pinned versions)</text>
+    <text x="295" y="596" font-size="15">review / extraction tiers</text>
+    <text x="295" y="620" font-size="15">escalation re-judge tier</text>
     <text x="295" y="728" font-size="19" font-weight="bold">LLM Response Cache</text>
     <text x="295" y="756" font-size="15">Avoids Repeat Model Calls</text>
     <text x="295" y="878" font-size="19" font-weight="bold">Location Extractor</text>
@@ -132,7 +132,7 @@
     <text x="860" y="506" font-size="15">Multi-format Parsing</text>
     <text x="860" y="530" font-size="15">(Excel / Word / CSV / MD / TXT)</text>
     <text x="860" y="662" font-size="21" font-weight="bold">LLM Semantic Parser</text>
-    <text x="860" y="688" font-size="13">Max reads raw grids → coordinates for irregular tables</text>
+    <text x="860" y="688" font-size="13">Strong tier reads raw grids → coordinates for irregular tables</text>
     <text x="860" y="710" font-size="13">Wide tables mapped in batches · per-column paper evidence</text>
     <text x="860" y="732" font-size="13">Field mapping | metadata extraction | schema recognition</text>
     <text x="1430" y="668" font-size="21" font-weight="bold">Database Parser</text>
@@ -145,7 +145,7 @@
     <text x="860" y="1076" font-size="15">mmol/mol | µmol/mol | ‰ VPDB | °C Normalization</text>
     <text x="860" y="1100" font-size="15">Isotope-scale &amp; source-unit verification</text>
   </g>
-  <text x="1140" y="646" text-anchor="end" font-size="13" font-style="italic" fill="#3d2f00">qwen3.8-flash / qwen4-max-preview</text>
+  <text x="1140" y="646" text-anchor="end" font-size="13" font-style="italic" fill="#3d2f00">flash / review tiers</text>
   <g text-anchor="middle" fill="#FFFFFF">
     <text x="860" y="1208" font-size="21" font-weight="bold">Quality Control</text>
     <text x="860" y="1236" font-size="15">Outlier Detection | Calibration Validation |</text>
@@ -165,7 +165,7 @@
   <!-- ================= ADJUDICATION PANEL (former legend position) ================= -->
   <rect x="1200" y="800" width="460" height="780" rx="8" fill="#FBF6E3" stroke="#BF9000" stroke-width="2"/>
   <text x="1215" y="828" font-size="17" font-weight="bold" fill="#7a5c00">ADJUDICATION</text>
-  <text x="1215" y="848" font-size="11" font-style="italic" fill="#8a7a40">Three recovery rounds · Jev · DeepSeek · Max</text>
+  <text x="1215" y="848" font-size="11" font-style="italic" fill="#8a7a40">Three recovery rounds · Jev · remap · paper review</text>
 
   <!-- parser -> adjudication panel (hop over database merge line; above panel fill) -->
   <path d="M1160,730 H1180 V774 A6,6 0 0 1 1180,786 V790 H1430 V858" stroke="#111" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
@@ -173,11 +173,11 @@
 
   <!-- Round 1: extraction-time mapping gate -->
   <polygon points="1430,862 1535,901 1430,940 1325,901" fill="#FFFFFF" stroke="#BF9000" stroke-width="2"/>
-  <text x="1430" y="897" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b4500">Jev Judge (tev1:4b)</text>
+  <text x="1430" y="897" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b4500">Jev Judge (confidence gate)</text>
   <text x="1430" y="915" text-anchor="middle" font-size="12" fill="#5b4500">p ≥ 0.60?</text>
 
   <rect x="1330" y="952" width="200" height="50" rx="5" fill="#C4574A" stroke="#9E4438" stroke-width="1.8"/>
-  <text x="1430" y="972" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#FFF">DeepSeek Remap</text>
+  <text x="1430" y="972" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#FFF">Independent Remap</text>
   <text x="1430" y="990" text-anchor="middle" font-size="10.5" fill="#FFF">independent re-parse</text>
 
   <polygon points="1430,1014 1535,1053 1430,1092 1325,1053" fill="#FFFFFF" stroke="#BF9000" stroke-width="2"/>
@@ -195,10 +195,10 @@
     <text x="1430" y="1200" font-size="10.5">unit / scale / isotope verbatim binding</text>
   </g>
 
-  <!-- Round 3: expanded scope + carbonate convention + Max full-text review -->
+  <!-- Round 3: expanded scope + carbonate convention + paper full-text review -->
   <rect x="1275" y="1228" width="310" height="72" rx="5" fill="#4A7EBB" stroke="#2E5A8F" stroke-width="1.8"/>
   <g text-anchor="middle" fill="#FFF">
-    <text x="1430" y="1250" font-size="14" font-weight="bold">Max Paper-level Review</text>
+    <text x="1430" y="1250" font-size="14" font-weight="bold">Paper-level Review</text>
     <text x="1430" y="1268" font-size="10.5">expanded scope · carbonate convention</text>
     <text x="1430" y="1286" font-size="10.5">verbatim check on pages + attachments</text>
   </g>
@@ -209,8 +209,8 @@
 
   <rect x="1215" y="1408" width="200" height="76" rx="5" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
   <g text-anchor="middle" fill="#1B5E20">
-    <text x="1315" y="1434" font-size="12.5" font-weight="bold">Verified Source Replay</text>
-    <text x="1315" y="1454" font-size="10.5">re-extract affected files</text>
+    <text x="1315" y="1434" font-size="12.5" font-weight="bold">Verified Decision Application</text>
+    <text x="1315" y="1454" font-size="10.5">apply to affected sources</text>
     <text x="1315" y="1470" font-size="10.5">repeat all checks</text>
   </g>
   <rect x="1445" y="1408" width="200" height="76" rx="5" fill="#C4574A" stroke="#9E4438" stroke-width="1.8"/>
@@ -258,7 +258,7 @@
   <text x="1250" y="1045" font-size="10" fill="#2E7D32">≥ 0.60</text>
   <text x="1200" y="1070" text-anchor="middle" font-size="9.5" fill="#2E7D32">accepted</text>
 
-  <!-- QC evidence gaps -> Max -->
+  <!-- QC evidence gaps -> strong tier -->
   <polyline points="1160,1225 1185,1225 1185,1264 1271,1264" stroke="#2E5A8F" stroke-width="2" fill="none" marker-end="url(#arrB)"/>
   <text x="1176" y="1245" text-anchor="middle" font-size="9" fill="#2E5A8F" transform="rotate(-90 1176 1245)">QC gaps</text>
 
@@ -268,24 +268,24 @@
 
   <!-- terminal disposition: no human review -->
   <text x="1430" y="1512" text-anchor="middle" font-size="10" fill="#667">three rounds unrecovered → evidence-based discard · no human review</text>
-  <text x="1430" y="1530" text-anchor="middle" font-size="10" fill="#667">discards reversible &amp; ledger-logged · decisions reused next run</text>
+  <text x="1430" y="1530" text-anchor="middle" font-size="10" fill="#667">discards reversible &amp; ledger-logged · ledger preserved for curation</text>
 
   <!-- ================= COVERAGE AUDIT & TARGETED RECOVERY ================= -->
   <g filter="url(#ds)">
     <rect x="120" y="1470" width="440" height="110" rx="10" fill="#A9C4E4" stroke="#2E5A8F" stroke-width="2"/>
   </g>
   <g text-anchor="middle" fill="#111">
-    <text x="340" y="1492" font-size="14" font-weight="bold">Coverage Audit &amp; Targeted Recovery</text>
+    <text x="340" y="1492" font-size="14" font-weight="bold">Coverage Audit &amp; Gap Verification</text>
     <text x="340" y="1512" font-size="10.5">source evidence vs output per folder / column / sheet / row</text>
-    <text x="340" y="1530" font-size="10.5">covered · irrelevant → exclude · gap → tiered recovery</text>
-    <text x="340" y="1548" font-size="10.5">deterministic → Flash locate → Max review → verified patch</text>
-    <text x="340" y="1566" font-size="10.5">FILE_EXCLUDE / FILE_RECOVER · reversible · sha-bound</text>
+    <text x="340" y="1530" font-size="10.5">covered · irrelevant → exclude · gap → tiered verification</text>
+    <text x="340" y="1548" font-size="10.5">deterministic → lightweight locate → paper review → verified revision</text>
+    <text x="340" y="1566" font-size="10.5">file-level exclude / recover · reversible · sha-bound</text>
   </g>
   <!-- export stream branches into audit -->
   <line x1="860" y1="1520" x2="566" y2="1520" stroke="#111" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
   <!-- audit gaps feed the adjudication / patch loop (hop over export stream) -->
   <path d="M560,1560 H852 A8,8 0 0 1 868,1560 H1196" stroke="#8494A7" stroke-width="2" stroke-dasharray="7,5" fill="none" marker-end="url(#arrGray)"/>
-  <text x="700" y="1552" text-anchor="middle" font-size="9.5" fill="#667">audit gaps → review &amp; patch</text>
+  <text x="700" y="1552" text-anchor="middle" font-size="9.5" fill="#667">audit gaps → review &amp; adjudicate</text>
 
   <!-- ================= OUTPUT LAYER ================= -->
   <g stroke="#111" stroke-width="2.5" fill="none">
@@ -346,10 +346,10 @@
 
   <text x="640" y="1920" font-size="17" font-weight="bold" fill="#111">Quality Control (implemented)</text>
   <g font-size="14" fill="#222">
-    <text x="650" y="1948">Row qc_flag 0: clean · 2: outlier kept</text>
-    <text x="650" y="1974">Row qc_flag 3: out of range · 4: pending review</text>
-    <text x="650" y="2000">Value qc_status: pass / outlier_flagged / held</text>
-    <text x="650" y="2026">Analysis set: value pass/outlier_flagged + year gate</text>
+    <text x="650" y="1948">Row-level flag 0: clean · 2: outlier kept</text>
+    <text x="650" y="1974">Row-level flag 3: out of range · 4: pending review</text>
+    <text x="650" y="2000">Value-level status: pass / outlier-flagged / held</text>
+    <text x="650" y="2026">Analysis set: value pass/outlier-flagged + year gate</text>
   </g>
 
   <text x="1150" y="1920" font-size="17" font-weight="bold" fill="#111">Symbols</text>

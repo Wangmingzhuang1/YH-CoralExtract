@@ -12,7 +12,7 @@ import matplotlib.ticker as ticker
 from matplotlib.colors import LogNorm
 
 from . import style
-from .style import (HAS_CARTOPY, ccrs, cfeature, PALETTE, GROUP_ORDER, GROUP_COLORS,
+from .style import (HAS_CARTOPY, ccrs, cfeature, PALETTE, GROUP_ORDER, GROUP_COLORS, GROUP_DISPLAY,
                     G_COLORS, BASIN_COLORS, PROXY_COLORS,
                     add_panel_label, save_figure)
 from .loader import add_series_identity, load_figure1_data, process_data
@@ -118,7 +118,7 @@ def plot_figure_1_optimized(df, split_other=False):
         if dated['Group'].eq(group).any():
             ax_map.scatter(subset['Lon'], subset['Lat'], color=colors[group], marker=marker,
                            s=24, edgecolor='white', linewidth=0.35, transform=ccrs.PlateCarree(),
-                           label=group, zorder=3)
+                           label=GROUP_DISPLAY.get(group, group), zorder=3)
     if not regional.empty:
         points = regional[['geo_rep_longitude', 'geo_rep_latitude']].drop_duplicates()
         ax_map.scatter(points['geo_rep_longitude'], points['geo_rep_latitude'],
@@ -226,8 +226,8 @@ def plot_figure_1_optimized(df, split_other=False):
     fig.text(0.11, 0.036, f'Dated rows in (c): {len(exact):,} with point locations. '
              f'Regional only: {len(regional):,}. No verified location: {no_location:,}.', fontsize=7)
     if split_other:
-        fig.text(0.11, 0.018, 'Ba/Ca-only and SST-only markers: rows without Sr/Ca, δ¹⁸O or δ¹³C '
-                 'after value-level QC (no pooled "Other" class).', fontsize=7)
+        fig.text(0.11, 0.018, 'Ba/Ca-only, SST-only and Ba/Ca + SST markers: rows without Sr/Ca, δ¹⁸O or δ¹³C '
+                 'after value-level QC, shown as separate classes rather than pooled.', fontsize=7)
     else:
         fig.text(0.11, 0.018, 'Group "Other": rows without Sr/Ca, δ¹⁸O or δ¹³C after value-level QC '
                  '(Ba/Ca- or SST-only records).', fontsize=7)

@@ -32,7 +32,7 @@ from source_audit import audit_source_tables
 
 
 MOA = ROOT / "output" / "moa_output"
-DEFAULT_RUN = MOA / "run_20261111_155418_556705"
+DEFAULT_RUN = MOA / "run_20261114_223923_498530"
 BASELINE_DIR = MOA / "run_20261111_052203_466656"
 # 外部格点归档曾位于 moa_output 内，清理后可能移到盘根；按候选顺序探测。
 _EXTERNAL_CANDIDATES = [MOA / loader.FALLBACK_EXTERNAL_DIRNAME,
@@ -353,6 +353,7 @@ def load_archive(run):
         *loader.SUMMARY_COL_MAP, "time_resolution", "paper_hash", "source_file", "sheet_name",
         "source_record_id", "data_source", "source_time_value", "source_time_column", "source_time_unit",
         "source_line", "source_columns", "source_time_reference_year", "source_time_date_order",
+        "source_sheet_name", "source_header_line", "mapping_route",
         "observation_id", "record_type", "qc_flag",
         "qc_time_status", "qc_location_status", "paleoData_dating_method", "testing_method",
         "native_interval_years",
