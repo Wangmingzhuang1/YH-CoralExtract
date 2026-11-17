@@ -4,6 +4,6 @@ type: software
 title: YH-CoralExtract
 authors:
   - name: YH-CoralExtract contributors
-version: 1.0.2
+version: 1.0.3
 repository-code: https://github.com/Wangmingzhuang1/YH-CoralExtract
 license: MIT
