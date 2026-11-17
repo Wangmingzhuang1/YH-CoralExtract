@@ -58,6 +58,10 @@ OBSERVATION_COLUMNS = {
     "year_ce": "year_CE",
     "time_resolution": "time_resolution",
     "native_interval_years": "native_interval_years",
+    "source_time_value": "source_time_value",
+    "source_time_unit": "source_time_unit",
+    "source_time_reference_year": "source_time_reference_year",
+    "source_time_column": "source_time_column",
     "qc_flag": "qc_flag",
 }
 

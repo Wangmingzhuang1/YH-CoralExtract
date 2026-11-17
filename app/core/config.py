@@ -57,6 +57,10 @@ class Settings(BaseSettings):
     HTTP_PROXY: str = ""
     HTTPS_PROXY: str = ""
 
+    # Zenodo 上传（app/release/zenodo.py）；沙箱测试可用 ZENODO_SANDBOX_TOKEN 覆盖
+    ZENODO_TOKEN: str = ""
+    ZENODO_SANDBOX_TOKEN: str = ""
+
     # 数据库配置（已停用）
     # DB_SERVER: str = "127.0.0.1"
     # DB_USER: str = ""
