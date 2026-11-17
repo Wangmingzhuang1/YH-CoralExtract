@@ -167,8 +167,17 @@ def create_secret_link(deposit_id, token: str, sandbox: bool = False) -> dict:
 
 def set_access_conditions(deposit_id, token: str, access: str, sandbox: bool = False,
                           embargo_date=None) -> dict:
-    """设置访问条件：open/restricted/embargoed/closed（发布时生效）。"""
-    metadata = {"access_conditions": access}
+    """设置访问条件：open/restricted/embargoed/closed（发布时生效）。
+
+    Zenodo 的 PUT metadata 为整体替换而非合并，必须先取回当前元数据再叠加访问字段，
+    否则会把 title/creators 等必需字段清空导致发布校验失败。
+    """
+    current = requests.get(
+        f"{api_url(sandbox)}/deposit/depositions/{deposit_id}",
+        headers=_headers(token), timeout=TIMEOUT)
+    current.raise_for_status()
+    metadata = dict(current.json().get("metadata") or {})
+    metadata["access_conditions"] = access
     if access == "embargoed" and embargo_date:
         metadata["embargo_date"] = embargo_date
     response = requests.put(
